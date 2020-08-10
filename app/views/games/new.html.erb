@@ -1,0 +1,14 @@
+<h2>New game</h2>
+<h3>Here are your letters: </h3>
+<% @letters_array.each do |letter|%>
+<%= letter %>
+<% end %>
+
+<form action="/score" method="post">
+  <p>
+    <input type="text" placeholder="write your answer" name="user-answer">
+  </p>
+    <input type="submit" value="envoyer">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :key, @letters_array %>
+</form>

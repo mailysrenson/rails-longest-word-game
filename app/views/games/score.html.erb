@@ -1,0 +1,14 @@
+<h2>Score</h2>
+<br>
+<p>The letters were: 
+<% @array.each do |letter|%>
+<%= letter %>
+<% end %>
+
+</p> 
+<p>Your answer was: <%= @answer%></p>
+
+<p><%= @message %></p>
+<p>Your score is <%=@score%></p>
+
+<%= link_to "try again", new_path %>
